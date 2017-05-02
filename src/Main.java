@@ -10,13 +10,13 @@ import com.sforce.ws.ConnectorConfig;
  * Date: 13/08/12
  * Time: 5:03 PM
  * To change this template use File | Settings | File Templates.
- * Modified: 8
+ * Modified: 9 s
  */
 public class Main {
     
-    public static final String USERNAME = "";
-    public static final String PASSWORD = "";
-    public static final String SERVER = "https://cs5-api.salesforce.com";
+    public static final String USERNAME = "jesita.manuel@rntbci.com.tools";
+    public static final String PASSWORD = "renault01";
+    public static final String SERVER = "https://test.salesforce.com";
 
     public static void main(String[] args) throws ConnectionException {
 
@@ -28,7 +28,11 @@ public class Main {
 
         config.setUsername(USERNAME);
         config.setPassword(PASSWORD);
-
+       
+        config.setProxy("138.21.89.90", 3128);
+	    config.setProxyUsername("z014752");
+	    config.setProxyPassword("NaAmAb12");
+  
         //Does a login and gets you a session id into the config instance.
         EnterpriseConnection p = new EnterpriseConnection(config);
 
